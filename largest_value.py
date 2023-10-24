@@ -19,11 +19,11 @@ def dfs(root):
         curr_node = stack.pop()
         values.append(curr_node.val)
 
-        if curr_node.left:
-            stack.append(curr_node.left)
-
         if curr_node.right:
             stack.append(curr_node.right)
+
+        if curr_node.left:
+            stack.append(curr_node.left)
 
     return values
 
@@ -50,5 +50,5 @@ def bfs(root):
 
 if __name__ == '__main__':
     root = Node(1, Node(3, Node(5), Node(3)), Node(2, None, Node(9)))
-    print(dfs(root)) # [1, 2, 9, 3, 3, 5]
+    print(dfs(root)) # [1, 3, 5, 3, 2, 9]
     print(bfs(root)) # [1, 3, 2, 5, 3, 9]
