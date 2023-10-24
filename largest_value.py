@@ -7,6 +7,7 @@ class Node:
         self.left = left
         self.right = right
 
+
 def dfs(root):
     if not root:
         return []
@@ -45,6 +46,7 @@ def bfs(root):
             queue.append(curr_node.right)
 
     return values
+
 
 if __name__ == '__main__':
     root = Node(1, Node(3, Node(5), Node(3)), Node(2, None, Node(9)))
