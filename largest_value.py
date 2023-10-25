@@ -77,6 +77,7 @@ def largest_values(root):
 
 
 if __name__ == '__main__':
+    print('vic')
     root = Node(1, Node(3, Node(5), Node(3)), Node(2, None, Node(9)))
     print(dfs(root)) # [1, 3, 5, 3, 2, 9]
     print(bfs(root)) # [1, 3, 2, 5, 3, 9]
